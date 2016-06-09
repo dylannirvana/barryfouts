@@ -1,0 +1,70 @@
+#fine-arts-east {
+
+    // IMAGE FULL HEIGHT OF WINDOW
+    // @include backImage('../img/hotel.jpg');
+  .fullheight .item {
+    // background: no-repeat center center fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    position: relative;
+  }
+
+  .image {
+    position: relative;
+    width: 100%;
+
+    .title {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      top: 23%;
+
+      // add blur later
+      // .blur {
+      //   background-image: url(../img/firenze.jpg);
+      //   -webkit-filter: blur(10px);
+      //   filter: url('/media/blur.svg#blur');
+      //   filter: blur(10px);
+      // }
+
+      // title
+      h1 {
+        color: darken($dark, 10);
+        font-size: 3rem;
+        @include breakpoint($small) {
+          font-size: 5em;
+        }
+        text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3);
+      }
+
+      h2 {
+        font-size: 1.2rem;
+        // display: none;
+        @include breakpoint($small) {
+          // display: block;
+          font-size: 2.3rem;
+        }
+      }
+
+      // background for sub type
+      span {
+        //  color: $dark;
+        //  background: rgb(0, 0, 0); /* fallback color */
+         background: rgba(255, 255, 255, 0.3);
+         padding: 120px 100px 60px 100px;
+      }
+    }
+
+  } // END image
+
+
+
+
+
+
+} // END fine arts east
