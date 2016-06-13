@@ -1,34 +1,70 @@
 $(function() {
-  var topoffset = 0;
+  'use strict';
 
+  var topoffset = 0;
   var isTouch = 'ontouchstart' in document.documentElement;
 
-  var $item = $('.carousel-main .item');
-  var $wHeight = $(window).height();
-  $item.eq(0).addClass('active');
+  // //window height
+  // var wheight = $(window).height(); //get height of the window
+  //
+  // $('.fullheight').css('height', wheight);
+  //
+  // $(window).resize(function() {
+  //   var wheight = $(window).height(); //get height of the window
+  //   $('.fullheight').css('height', wheight);
+  // }); //on resize
+
+  //window width
+  // var wWidth = $(window).width(); //get width of the window
+  //
+  // $('.fullwidth').css('width', wWidth);
+  //
+  // $(window).resize(function() {
+  //   var wWidth = $(window).width(); //get width of the window
+  //   $('.fullwidth').css('width', wWidth);
+  // }); //on resize
+
+// ISOTOPE
+$('.grid').isotope({
+  itemSelector: '.grid-item',
+  masonry: {
+    columnWidth: 20
+  }
+});
+
+
+var $item = $('.carousel-main .item');
+var $wHeight = $(window).height();
+$item.eq(0).addClass('active');
+$item.height($wHeight);
+$item.addClass('fullheight');
+
+$('.carousel-main img').each(function() {
+  var $src = $(this).attr('src');
+  var $color = $(this).attr('data-color');
+  $(this).parent().css({
+    'background-image' : 'url(' + $src + ')',
+    'background-color' : $color
+  });
+  $(this).remove();
+});
+
+$(window).on('resize', function (){
+  $wHeight = $(window).height();
   $item.height($wHeight);
-  $item.addClass('fullheight');
+});
 
-  $('.carousel-main img').each(function() {
-    var $src = $(this).attr('src');
-    var $color = $(this).attr('data-color');
-    $(this).parent().css({
-      'background-image' : 'url(' + $src + ')',
-      'background-color' : $color
-    });
-    $(this).remove();
-  });
+$('.carousel').carousel({
+  interval: 6000,
+  pause: "true"
+});
 
-  $(window).on('resize', function (){
-    $wHeight = $(window).height();
-    $item.height($wHeight);
-  });
-
-  $('.carousel').carousel({
-    interval: 6000,
-    pause: "true"
-  });
-
+//replace IMG inside CAROUSEL with a background image
+$('#featured .item img').each(function() {
+  var imgSrc = $(this).attr('src');
+  $(this).parent().css({'background-image': 'url('+imgSrc+')'});
+  $(this).remove();
+});
 
 // Animated Scrolling
   $('a[href*=#]:not([href=#])').click(function() {

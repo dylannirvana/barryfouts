@@ -43,6 +43,7 @@ if (env==='development') {
 jsSources = [
   // 'node_modules/jquery/dist/jquery.min.js',
   'node_modules/bootstrap-sass/assets/javascripts/bootstrap.js',
+  // 'components/scripts/bootstrap-year-calendar.js',
   // 'components/scripts/jqloader.js',
   // 'components/bootstrap/javascripts/bootstrap.js',
   // 'components/bootstrap/javascripts/bootstrap-sprockets.js',

@@ -1,5 +1,5 @@
 {
-  "name": "george",
+  "name": "barryfouts",
   "version": "0.0.1",
   "description": "Gulp Sass Bootstrap to WordPress",
   "main": "gulpfile.js",
@@ -8,14 +8,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dylannirvana/devils-perfidy.git"
+    "url": ""
   },
   "author": "Dylan Nirvana",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/dylannirvana/devils-perfidy/issues"
-  },
-  "homepage": "https://github.com/dylannirvana/devils-perfidy#readme",
+  "homepage": "",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-browserify": "^0.5.1",

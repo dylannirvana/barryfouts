@@ -1,0 +1,83 @@
+#mi-casa {
+
+    // IMAGE FULL HEIGHT OF WINDOW
+    // @include backImage('../img/hotel.jpg');
+  .fullheight .item {
+    // background: no-repeat center center fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    // position: relative;
+  }
+
+  .image {
+    // position: absolute;;
+    width: 100%;
+  //
+  //   div.testimonial {
+  //     position: absolute;
+  //     width: 100%;
+  //     text-align: center;
+  //     top: 50%;
+  //
+  //     // add blur later
+  //     // .blur {
+  //     //   background-image: url(../img/firenze.jpg);
+  //     //   -webkit-filter: blur(10px);
+  //     //   filter: url('/media/blur.svg#blur');
+  //     //   filter: blur(10px);
+  //     // }
+  //
+  //     .wrapthis {
+  //       padding: 40px 0px 40px 0px;
+  //       margin: 40px 120px 40px 100px;
+  //       background: rgba(255, 255, 255, 0.3);
+  //
+  //     }
+  //
+  //     // title
+  //     h1 {
+  //       color: $water;
+  //       font-family: $fontScript;
+  //
+  //       text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3);
+  //       // font-size: 3rem;
+  //       @include breakpoint($small) {
+  //         font-size: 5em;
+  //       }
+  //
+  //     }
+  //
+  //     h2 {
+  //       font-size: 1.2rem;
+  //       // display: none;
+  //       @include breakpoint($small) {
+  //         // display: block;
+  //         font-size: 2.3rem;
+  //       }
+  //     }
+  //
+  //     // background for sub type
+  //     h3 {
+  //       margin-left: 40%;
+  //       // font-size: 1.7rem;
+  //        color: $sun;
+  //        text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3);
+  //       //  background: rgb(0, 0, 0); /* fallback color */
+  //       //  background: rgba(255, 255, 255, 0.3);
+  //       //  padding: 120px 100px 60px 100px;
+  //     }
+  //   }
+  //
+  } // END image
+
+
+
+
+
+
+} // END

@@ -12,27 +12,26 @@
 @import "breakpoint";
 
 // CORE
-@import "variables";
 
 // MIXINS
 @import "mixins";
+
+// TWBS 3
+@import "../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "variables";
+@import "bootstrap";
 
 // DOCUMENT
 @import "base";
 @import "layout";
 
-// TWBS 3
-@import "../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
-@import "bootstrap";
 
 // MODULES
-@import "modules/fine-arts-east";
-@import "modules/delue";
+@import "modules/mi-casa";
+@import "modules/awesome";
 @import "modules/about-us";
-@import "modules/news";
-@import "modules/inquiries";
-@import "modules/fine-art";
-@import "modules/antiques";
+@import "modules/price";
+@import "modules/availability";
 
 // FOOTER
 @import "modules/footer";
