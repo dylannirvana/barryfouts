@@ -1,0 +1,37 @@
+<html>
+<head>
+    <title>Writing review for <%= @listing.ad_content.headline %></title>
+</head>
+<body>
+<h3>Writing review for <%= @listing.ad_content.headline %></h3>
+<br/>
+<%= @listing.ad_content.accommodationsSummary %>
+<br/><br/>
+
+
+<form method="POST" action="/submitReview">
+    arrival date:<input type="text" name="arrival_date"/><br/>
+    headline:<input type="text" name="headline"/><br/>
+    rating:
+    <select name="rating">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+    <br/>
+    review text:<br/>
+    <textarea name="body" rows="10" cols="80"></textarea><br/>
+    <input type="hidden" name="listing_id" value="<%= @listing.listing_id %>"/>
+    <input type="submit" value="submit review"/>
+</form>
+
+
+<br/>
+<br/>
+
+<br/><br/>
+<a href="/listing/<%= @listing.listing_id %>">go back</a>
+</body>
+</html>

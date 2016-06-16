@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>Search results for <%= "#{session[:me].first_name} #{session[:me].last_name}" %></title>
+</head>
+<body>
+<h3>Search results for <%= "#{session[:me].first_name} #{session[:me].last_name}" %></h3>
+<br/>
+Here are your search results:
+<ul>
+    <% @search_results.each do |result| %>
+        <li>
+            <% if result.has?(:thumbnail) %>
+                <img src="<%= result.thumbnail.secureUri %>"/>
+            <% end %>
+            <a href="/listing/<%= result.listingId %>"><%= result.headline %></a>
+        </li>
+    <% end %>
+</ul>
+
+<br/><br/>
+<a href="/">go back</a>
+</body>
+</html>

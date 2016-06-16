@@ -1,0 +1,56 @@
+<html>
+<head>
+    <title>Listing details for <%= @listing.ad_content.headline %></title>
+</head>
+<body>
+<h3>Listing details for <%= @listing.ad_content.headline %></h3>
+<br/>
+<%= @listing.ad_content.accommodationsSummary %>
+<br/><br/>
+<%= @listing.ad_content.description %>
+<br/><br/>
+
+<form method="GET" action="/bookIt">
+    <h3>book this property now:</h3><br/>
+    start date:<input type="text" name="start_date"/><br/>
+    end date:<input type="text" name="end_date"/><br/>
+    # of people:
+    <select name="adults_count">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+    </select>
+    <br/>
+    <input type="hidden" name="listing_id" value="<%= @listing.listing_id %>"/>
+    <input type="submit" value="book it!"/>
+</form>
+<h4><a href="/writeReview/<%= @listing.listing_id %>">write a review for this listing</a></h4>
+<br/>
+<h4>Features</h4>
+<ul>
+    <% @listing.units.each do |unit| %>
+        <% unit.unitContent.features.each do |feature| %>
+            <li><%= feature.localizedName %> </li>
+        <% end %>
+    <% end %>
+</ul>
+
+<h4>Photos:</h4>
+<% @listing.photos.photos.each do |photo| %>
+    <img src="<%= photo.medium.uri %>"/>
+<% end %>
+
+<br/>
+<br/>
+
+<br/><br/>
+<a href="/">go back</a>
+</body>
+</html>

@@ -24,7 +24,7 @@ var env,
     sassStyle;
 
 
-env = 'development';
+env = 'production';
 // env = process.env.NODE_ENV || 'development';
 
 if (env==='development') {

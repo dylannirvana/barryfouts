@@ -3,4 +3,23 @@
     font-size: 1.2em;
     text-align: center;
   }
+  table {
+    margin-bottom: 0px;
+    div.date-range  {
+      line-height: 1.7rem;
+      font-size: 1.4rem;
+      color: $gray;
+    }
+    th {
+      color: $sun;
+    }
+    td {
+      font-size: 1.6rem;
+      color: $gray;
+    }
+  }
+  cite {
+    font-size: 1rem;
+
+  }
 }

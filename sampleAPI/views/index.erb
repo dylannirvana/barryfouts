@@ -1,0 +1,15 @@
+<html>
+<head>
+    <title>Welcome <%= "#{@me.first_name} #{@me.last_name}" %></title>
+</head>
+<body>
+<h3>Welcome <%= "#{@me.first_name} #{@me.last_name}" %></h3>
+<br/>
+<form method="GET" action="/search">
+    Enter a destination to search for:<br/>
+    <input type="text" name="q"/>
+    <br/><br/>
+    <input type="submit" value="Search"/>
+</form>
+</body>
+</html>

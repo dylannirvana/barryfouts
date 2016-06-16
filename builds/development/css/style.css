@@ -7417,17 +7417,28 @@ button.close {
 }
 .navbar ul.nav.navbar-nav li, .navbar ul.nav.navbar-nav a {
   color: #105B8D;
+  text-transform: uppercase;
   font-weight: 400;
-  font-size: 1.6rem;
   text-align: center;
 }
 .navbar ul.nav.navbar-nav li:hover, .navbar ul.nav.navbar-nav a:hover {
   color: #1579bb;
 }
+@media (min-width: 768px) {
+  .navbar ul.nav.navbar-nav li span, .navbar ul.nav.navbar-nav a span {
+    display: none;
+  }
+}
+@media (min-width: 960px) {
+  .navbar ul.nav.navbar-nav li span, .navbar ul.nav.navbar-nav a span {
+    display: inline;
+  }
+}
 @media (min-width: 960px) {
   .navbar .navbar-brand {
     font-size: 2em;
     padding-left: 40px;
+    text-transform: capitalize;
   }
 }
 
@@ -7445,8 +7456,15 @@ a.list-group-item.active:visited {
   border-color: #d4a75a;
 }
 
+.grid {
+  text-align: center;
+}
+.grid p {
+  text-align: left;
+}
+
 .grid-item {
-  max-width: 240px;
+  max-width: 90%;
   border: 2px;
   border-color: #DBB676;
   border-radius: 6px;
@@ -7455,8 +7473,22 @@ a.list-group-item.active:visited {
   padding: 16px;
 }
 .grid-item img {
-  max-width: 200px;
+  max-width: 90%;
   text-align: center;
+}
+.grid-item p {
+  display: none;
+}
+@media (min-width: 650px) {
+  .grid-item {
+    max-width: 240px;
+  }
+  .grid-item img {
+    max-width: 200px;
+  }
+  .grid-item p {
+    display: block;
+  }
 }
 
 .carousel-caption {
@@ -7514,9 +7546,27 @@ body .scene h1, body .scene h2, body .scene h3, body .scene h4, body .scene h5, 
 body .scene strong {
   font-weight: 600;
 }
+body .scene h2 {
+  font-size: 2.3rem;
+}
+body .scene h3 {
+  font-size: 1.9rem;
+}
 body .scene p {
   padding-bottom: 10px;
   font: 200 1.9rem/2.1rem "Crimson Text", Times, serif;
+  font-size: 1.7rem;
+}
+@media (min-width: 960px) {
+  body .scene h2 {
+    font-size: 3rem;
+  }
+  body .scene h3 {
+    font-size: 2.4rem;
+  }
+  body .scene p {
+    font-size: 1.9rem;
+  }
 }
 
 .wp-core-ui .button-primary {
@@ -7536,7 +7586,6 @@ body .scene p {
 }
 
 #awesome .modal button {
-  position: absolute;
   bottom: 10px;
   right: 10px;
 }
@@ -7559,6 +7608,24 @@ body .scene p {
 #price blockquote h6 {
   font-size: 1.2em;
   text-align: center;
+}
+#price table {
+  margin-bottom: 0px;
+}
+#price table div.date-range {
+  line-height: 1.7rem;
+  font-size: 1.4rem;
+  color: #313131;
+}
+#price table th {
+  color: #BD4932;
+}
+#price table td {
+  font-size: 1.6rem;
+  color: #313131;
+}
+#price cite {
+  font-size: 1rem;
 }
 
 .footer {

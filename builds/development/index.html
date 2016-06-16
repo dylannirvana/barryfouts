@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Mi Casa es su casa</title>
+    <title>Mi Casa</title>
 
     <link href="css/style.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -37,8 +37,8 @@
           <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
               <!-- <li class=""><a href="#actor">Donald Delue<span class="sr-only">(current)</span></a></li> -->
-              <li><a href="#awesome">Awesome Inside and Out</a></li>
-              <li><a href="#price">Amenities and Price</a></li>
+              <li><a href="#awesome">Awesome <span>Inside &amp Out</span></a></li>
+              <li><a href="#price">Amenities &amp Price</a></li>
               <li><a href="#availability">Availability</a></li>
               <li><a href="#about-us">About us</a></li>
           </div><!-- END navbar-collapse -->
@@ -147,20 +147,32 @@
           </div>
         </div>
 
-        <!-- MODAL overlay -->
-        <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+      <!-- MODAL overlay -->
+        <div id="modal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
           <div class="modal-dialog modal-lg">
             <div class="modal-content">
-              <img src="img/cover/livingroom.jpg" width="100%" alt="">
-              <a href="http://paypal.com" class="btn" target="blank" role="button"><button type="button" name="button">Make a reservation</button></a>
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="false">&times;</span></button>
+                <h4 class="modal-title">Modal title</h4>
+              </div>
+              <div class="modal-body">
+                <img id="modalimage" src="" width="100%" alt="">
+              </div>
+              <div class="modal-footer">
+                <a href="#availability" class="btn btn-default" id="from-modal-btn"role="button">Make a reservation</a>
+               <!-- <button type="button" class="btn btn-default" href="http://paypal.com">Close</button> -->
+               <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+             </div>
             </div>
           </div>
         </div>
+      <!-- END modal overlay -->
 
         <!-- images and copy -->
-        <div class="grid">
+        <div class="grid modalphotos clearfix">
+
           <div class="grid-item well">
-            <a href="" role="button" data-toggle="modal" data-target=".bs-example-modal-lg">
+            <a role="button" >
               <img src="img/northface.jpg" alt="A beautiful location">
             </a>
             <h3>Beautiful location</h3>
@@ -168,7 +180,7 @@
           </div>
 
           <div class="grid-item well">
-            <a href="" role="button" data-toggle="modal" data-target=".bs-example-modal-lg">
+            <a role="button" >
               <img src="img/facingsun.jpg" alt="">
             </a>
             <h3>Morning sun</h3>
@@ -176,7 +188,7 @@
           </div>
 
           <div class="grid-item well">
-            <a href="" role="button" data-toggle="modal" data-target=".bs-example-modal-lg">
+            <a role="button" >
               <img src="img/stairs.jpg" alt="Lovely inside">
             </a>
             <h3>Lovely inside</h3>
@@ -184,7 +196,7 @@
           </div>
 
           <div class="grid-item well">
-            <a href="" role="button" data-toggle="modal" data-target=".bs-example-modal-lg">
+            <a role="button" >
               <img src="img/kitchen.jpg" alt="Large kitchen">
             </a>
             <h3>Large Kitchen</h3>
@@ -192,7 +204,7 @@
           </div>
 
           <div class="grid-item well">
-            <a href="" role="button" data-toggle="modal" data-target=".bs-example-modal-lg">
+            <a role="button" >
               <img src="img/washerdryer.jpg" alt="Washer and dryer">
             </a>
             <h3>Washer and dryer</h3>
@@ -200,7 +212,7 @@
           </div>
 
           <div class="grid-item well">
-            <a href="" role="button" data-toggle="modal" data-target=".bs-example-modal-lg">
+            <a role="button" >
               <img src="img/bedroom.jpg" alt="Gorgeous bedroom">
             </a>
             <h3>Gorgeous bedroom</h3>
@@ -208,7 +220,7 @@
           </div>
 
           <div class="grid-item well">
-            <a href="" role="button" data-toggle="modal" data-target=".bs-example-modal-lg">
+            <a role="button" >
               <img src="img/kidsbedroom.jpg" alt="Kids bedroom">
             </a>
             <h3>Kids bedroom</h3>
@@ -216,7 +228,7 @@
           </div>
 
           <div class="grid-item well">
-            <a href="" role="button" data-toggle="modal" data-target=".bs-example-modal-lg">
+            <a role="button" >
               <img src="img/yourdoor.jpg" alt="Safe and secure">
             </a>
             <h3>Safe and secure</h3>
@@ -224,7 +236,7 @@
           </div>
 
           <div class="grid-item well">
-            <a href="" role="button" data-toggle="modal" data-target=".bs-example-modal-lg">
+            <a role="button" >
               <img src="img/parking.jpg" alt="Easy parking">
             </a>
             <h3>Easy parking</h3>
@@ -232,7 +244,7 @@
           </div>
 
           <div class="grid-item well">
-            <a href="" role="button" data-toggle="modal" data-target=".bs-example-modal-lg">
+            <a role="button" >
               <img src="img/decksand.jpg" alt="Walk to the beach">
             </a>
             <h3>Walk to the beach</h3>
@@ -240,15 +252,15 @@
           </div>
 
           <div class="grid-item well">
-            <a href="" role="button" data-toggle="modal" data-target=".bs-example-modal-lg">
-              <img src="img/driveonbeach.jpg" alt="Drive on the beach">
+            <a role="button" >
+              <img class="myModal" src="img/driveonbeach.jpg" alt="Drive on the beach">
             </a>
             <h3>Drive on the beach</h3>
             <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           </div>
 
           <div class="grid-item well">
-            <a href="" role="button" data-toggle="modal" data-target=".bs-example-modal-lg">
+            <a role="button" >
               <img src="img/shells.jpg" alt="Collect shells">
             </a>
             <h3>Collect shells</h3>
@@ -256,7 +268,7 @@
           </div>
 
           <div class="grid-item well">
-            <a href="" role="button" data-toggle="modal" data-target=".bs-example-modal-lg">
+            <a role="button" >
               <img src="img/turtles.jpg" alt="Turtles nest here">
             </a>
             <h3>Sea Turtles nest</h3>
@@ -264,7 +276,7 @@
           </div>
 
           <div class="grid-item well">
-            <a href="" role="button" data-toggle="modal" data-target=".bs-example-modal-lg">
+            <a role="button" >
               <img src="img/enjoy.jpg" alt="Enjoy our home">
             </a>
             <h3>Enjoy our home</h3>
@@ -289,7 +301,54 @@
           </div>
 
           <div class="col-md-6">
-            <div class="list-group">
+
+            <table class="table table-hover">
+              <thead>
+                <th>Dates</th>
+                <th>Nightly</th>
+                <th>Weekly</th>
+                <th>Monthly</th>
+              </thead>
+
+              <tbody>
+                <tr class="table-hover">
+                  <th>
+                    Summer
+                    <div class="date-range">Feb 28 - Sep 30, 2016 <br>
+                      7 night min stay <br>
+                      <strong>Changeover day: Saturday</strong>
+                    </div>
+                  </th>
+                  <td></td>
+                  <td>$1,500</td>
+                  <td>$5,000</td>
+                </tr>
+                <tr class="table-hover">
+                  <th>
+                    Winter
+                    <div class="date-range">Oct 1 - Feb 28, 2017 <br>
+                      3 night min stay</div>
+                  </th>
+                  <td>$214</td>
+                  <td>$1,500</td>
+                  <td>$3,600</td>
+                </tr>
+                <tr class="table-hover">
+                  <th>
+                    Standard Rate
+                    <div class="date-range">7 night min stay <br>
+                    <strong>Changeover day: Saturday</strong>
+                  </div>
+                  </th>
+                  <td>$214</td>
+                  <td></td>
+                  <td>$5,000</td>
+                </tr>
+              </tbody>
+            </table>
+            <cite>* Approximate Monthly rates, actual rate will depend on the days of the month you stay</cite>
+
+            <!-- <div class="list-group">
               <a href="#" class="list-group-item active">
                 <h4 class="list-group-item-heading">Winter</h4>
                 <p class="list-group-item-text">Date range. Price.</p>
@@ -315,7 +374,7 @@
                 <h4 class="list-group-item-heading">Fall</h4>
                 <p class="list-group-item-text">Lorem ipsum dolor sit amet consectetur</p>
               </a>
-            </div>
+            </div> -->
 
           </div> <!-- END col-md-6 -->
         </div> <!-- END row -->
@@ -326,6 +385,7 @@
       <div class="scene" id="availability">
         <h2>Availability</h2>
 REFERENCE TO VRBO.
+<!-- <iframe src="https://www.vrbo.com/357529#calendar" width="100%" height="300"></iframe>  -->
 
 
       </div> <!-- END availability -->

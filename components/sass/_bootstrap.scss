@@ -21,11 +21,22 @@
   ul.nav.navbar-nav {
     li, a {
       color: $water;
+      text-transform: uppercase;;
       font-weight: $normal;
-      font-size: 1.6rem;
+      // font-size: 1.6rem;
       text-align: center;
       &:hover {
         color: lighten($water, 10);
+      }
+      @include breakpoint($small-medium) {
+        span {
+          display: none;
+        }
+      }
+      @include breakpoint($medium) {
+        span {
+          display: inline;;
+        }
       }
     }
   }
@@ -34,6 +45,7 @@
     .navbar-brand {
       font-size: 2em;
       padding-left: 40px;
+      text-transform: capitalize;
     }
   }
 
@@ -66,8 +78,16 @@ a.list-group-item.active {
 }
 
 // ISOTOPE
+
+.grid {
+  // margin: 0 auto;
+  text-align: center;
+  p {
+    text-align: left;
+  }
+}
 .grid-item {
-  max-width: 240px;
+  max-width: 90%;
   border: 2px;
   border-color: $tan;
   border-radius: 6px;
@@ -75,10 +95,22 @@ a.list-group-item.active {
   background-color: $sand;
   padding: 16px;
   img {
-    max-width: 200px;
+    max-width: 90%;
     text-align: center;
   }
+  p {
+    display: none;
+  }
+  @include breakpoint($small) {
+    max-width: 240px;
+    img {
+      max-width: 200px;
+    }
+    p {
+      display: block;
+    }
 
+  };
 }
 // .grid-item--width2 { width: 33%; }
 // .grid-item--width3 { width: 50%; }

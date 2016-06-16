@@ -2417,7 +2417,23 @@ $('.grid').isotope({
   }
 });
 
+// MODAL
 
+$('.modalphotos img').on('click', function(){
+  $('#modal').modal({
+    show: true,
+    backdrop: true,
+  })
+  // var mysrc = this.src.substr(0, this.src.length-7) + '.jpg';
+  var mysrc = this.src;
+  $('#modalimage').attr('src', mysrc);
+  $('#from-modal-btn').on('click', function(){
+    $('#modal').modal('hide');
+  })
+})
+
+
+// CAROUSEL
 var $item = $('.carousel-main .item');
 var $wHeight = $(window).height();
 $item.eq(0).addClass('active');
